@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='index-hr',
-    version='0.1',
+    name='indexhr',
+    version='0.3',
     description='index.hr basic news content in the terminal',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -13,7 +13,10 @@ setup(
     author_email='marinko.peso@gmail.com',
     license='MIT',
     packages=find_packages(exclude=['tests*']),
-    install_requires=[],
+    install_requires=[
+        'beautifulsoup4',
+        'six'
+    ],
     zip_safe=False,
     scripts=['bin/index-hr'],
     classifiers=[

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import curses, os, webbrowser, sys
-from scrapper import scrapped_data
+from indexhr import scrapped_data
 
 
 screen = curses.initscr()
