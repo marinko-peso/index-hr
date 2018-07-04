@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import absolute_import
+
 from six.moves.urllib.request import urlopen
 from bs4 import BeautifulSoup
 import re
 
-from utils import clean_text
+from .utils import clean_text
+
 
 _scrap_url = 'https://www.index.hr'
 _sections = ['vijesti', 'sport', 'magazin']
