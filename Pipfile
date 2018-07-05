@@ -4,12 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
+setuptools = "*"
+twine = "*"
 
 [packages]
 "beautifulsoup4" = "*"
 six = "*"
-setuptools = "*"
-twine = "*"
 
 [requires]
 python_version = "3.6"

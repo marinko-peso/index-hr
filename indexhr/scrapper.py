@@ -30,6 +30,7 @@ def _section_right_data(section):
         if not items:
             continue
         return [{
+            'section': section,
             'type': 'article',
             'text': _text(n),
             'url': _url(n)
@@ -44,6 +45,7 @@ def _header_data(section):
         url_elem = cube.find('a', {'class': '%s-text-hover' % section})
         text_elem = cube.find('h2', {'class': 'title'})
         return {
+            'section': section,
             'type': 'article',
             'text': _text(text_elem),
             'url': _url(url_elem)
