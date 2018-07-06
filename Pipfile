@@ -6,6 +6,8 @@ name = "pypi"
 [dev-packages]
 setuptools = "*"
 twine = "*"
+pbr = "*"
+pylint = "*"
 
 [packages]
 "beautifulsoup4" = "*"

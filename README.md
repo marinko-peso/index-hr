@@ -10,8 +10,7 @@ index.hr basic news content in the terminal
 
 # Installation
 
-Available on PyPi, latest version 0.6.
-Compatible with Python 2.7.x and 3.5.x.
+Available via PyPi.
 
 ```sh
 pip install indexhr

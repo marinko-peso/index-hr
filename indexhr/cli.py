@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from __future__ import absolute_import
 import curses, os, webbrowser, sys
-from indexhr import scrapped_data
+
+from .scrapper import scrapped_data
 
 
 screen = curses.initscr()
@@ -78,11 +80,12 @@ def _get_out_of_here():
     sys.exit(1)
 
 
-try:
-    _display_tui()
-except Exception as exception:
-    curses.endwin()
-    print(str(exception))
-    sys.exit(1)
+def main():
+    try:
+        _display_tui()
+    except Exception as exception:
+        curses.endwin()
+        print(str(exception))
+        sys.exit(1)
 
-_get_out_of_here()
+    _get_out_of_here()
