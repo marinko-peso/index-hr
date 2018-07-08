@@ -5,11 +5,6 @@ import curses, os, webbrowser, sys
 from indexhr import scrapped_data
 
 
-screen = curses.initscr()
-curses.noecho() # disable automatic echo of key presses
-curses.cbreak() # disable line buffering (run each key as pressed instead of waiting for return key to be pressed)
-curses.start_color() # enable using colors when highlighting
-screen.keypad(1) # capture input from keypad
 n_color = curses.A_NORMAL   # color for regular option
 h_colors = {                # higlight color options
     'vijesti': curses.COLOR_BLUE,
@@ -23,12 +18,23 @@ EXIT_KEY = ord('q')
 ENTER_KEY = ord('\n')
 
 
+class Style:
+   BOLD = '\033[1m'
+   END = '\033[0m'
+
+
 def get_highlight_color(section):
     curses.init_pair(1, curses.COLOR_WHITE, h_colors.get(section, curses.COLOR_WHITE))
     return curses.color_pair(1)
 
 
 def _navigate_tui(menu, pos):
+    screen = curses.initscr()
+    curses.noecho() # disable automatic echo of key presses
+    curses.cbreak() # disable line buffering (run each key as pressed instead of waiting for return key to be pressed)
+    curses.start_color() # enable using colors when highlighting
+    screen.keypad(1) # capture input from keypad
+
     optioncount = len(menu)
     oldpos = None
     x = None
@@ -73,16 +79,44 @@ def _display_tui():
             webbrowser.open(selected.get('url'), new=2)
 
 
+def _display_scrapped_and_exit():
+    for d in scrapped_data():
+        if d.get('type') == 'section':
+            continue
+        print('')
+        print('{} - {}{}{}'.format(
+            d.get('section'),
+            Style.BOLD,
+            d.get('text').decode('utf-8'),
+            Style.END
+        ))
+        print(d.get('url'))
+    print('')
+    sys.exit(1)
+
+
 def _get_out_of_here():
     curses.endwin()
     sys.exit(1)
 
 
-try:
-    _display_tui()
-except Exception as exception:
-    curses.endwin()
-    print(str(exception))
-    sys.exit(1)
+def main():
+    parser = argparse.ArgumentParser(description='index.hr basic news content in the terminal')
+    parser.add_argument('-v', '--version', action='store_true', help='currently installed version')
+    parser.add_argument('-r', '--raw', action='store_true', help='raw parsed data without cli')
+    args = parser.parse_args()
+    if args.raw:
+        _display_scrapped_and_exit()
 
-_get_out_of_here()
+    try:
+        _display_tui()
+    except Exception as exception:
+        curses.endwin()
+        print(str(exception))
+        sys.exit(1)
+
+    _get_out_of_here()
+
+
+if __name__ == "__main__":
+    main()

@@ -103,8 +103,8 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# editor specific
+# Editor specific
 .vscode
 
-# mac specific
+# Mac specific
 .DS_Store
