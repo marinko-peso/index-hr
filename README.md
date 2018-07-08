@@ -4,6 +4,7 @@
 [![PyPI](https://img.shields.io/pypi/v/indexhr.svg)](https://pypi.org/project/indexhr/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/indexhr.svg)](https://pypi.org/project/indexhr/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![codecov](https://codecov.io/gh/marinko-peso/index-hr/branch/master/graph/badge.svg)](https://codecov.io/gh/marinko-peso/index-hr)
 
 index.hr basic news content in the terminal
 
