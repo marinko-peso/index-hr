@@ -18,7 +18,8 @@
 
 from __future__ import absolute_import
 from .__about__ import *
-from .scrapper import scrapped_data
 
 
-__all__ = []
+__all__ = [
+    'scrapper'
+]

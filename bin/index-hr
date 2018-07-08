@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import curses, os, webbrowser, sys, argparse
-from indexhr import scrapped_data
+from indexhr.scrapper import scrapped_data
 from indexhr import __version__, __summary__
 
 

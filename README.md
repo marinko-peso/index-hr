@@ -8,27 +8,29 @@
 index.hr basic news content in the terminal
 
 
-# Installation
+## Installation
 
-Available on PyPi, latest version 0.6.
-Compatible with Python 2.7.x and 3.5.x.
+Available via PyPi, compatible with Python 2.7.x and 3.6.x.
 
 ```sh
 pip install indexhr
 ```
 
 
-# Usage
+## Usage
 
 In terminal as ```index-hr```.
 Navigation using up/down arrows. Clicking enter will open the selected in the new tab of your browser.
+Available options:
+- --raw (-r) [get just the parsed data without TUI]
+- ```from indexhr.scrapper import scrapped_data``` [scrapped data in your code]
 
 
-# Example
+## Example
 
 ![Content Example](example.png)
 
 
-# License
+## License
 
 MIT.
