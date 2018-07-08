@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import curses, os, webbrowser, sys
+import curses, os, webbrowser, sys, argparse
 from indexhr import scrapped_data
 
 
