@@ -16,9 +16,28 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from __future__ import absolute_import
-from .__about__ import *
-from .scrapper import scrapped_data
+import os.path
+import datetime
 
 
-__all__ = []
+__all__ = [
+    '__title__',
+    '__summary__',
+    '__url__',
+    '__version__',
+    '__author__',
+    '__email__',
+    '__license__',
+    '__copyright__',
+]
+
+__version__ = '0.7.0'
+__title__ = 'indexhr'
+__summary__ = 'index.hr basic news content in the terminal'
+__url__ = 'https://github.com/marinko-peso/index-hr/'
+__author__ = 'Marinko Peso'
+__email__ = 'marinko.peso@gmail.com'
+__license__ = 'MIT'
+
+now = datetime.datetime.now()
+__copyright__ = '%s %s' % (now.year, __author__)
