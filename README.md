@@ -5,6 +5,7 @@
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/indexhr.svg)](https://pypi.org/project/indexhr/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![Last Commit](https://img.shields.io/github/last-commit/marinko-peso/index-hr.svg?maxAge=3600)](https://github.com/marinko-peso/index-hr/commits/master)
+[![View Demo](https://img.shields.io/badge/view-demo-brightgreen.svg)](https://pli.io/sCkox.gif)
 [![codecov](https://codecov.io/gh/marinko-peso/index-hr/branch/master/graph/badge.svg)](https://codecov.io/gh/marinko-peso/index-hr)
 
 index.hr basic news content in the terminal
