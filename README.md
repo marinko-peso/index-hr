@@ -1,6 +1,6 @@
 # index-hr
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-[![license](https://img.shields.io/github/license/marinko-peso/index-hr.svg)](https://github.com/marinko-peso/gremlinc/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/marinko-peso/index-hr.svg)](https://github.com/marinko-peso/index-hr/blob/master/LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/indexhr.svg)](https://pypi.org/project/indexhr/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/indexhr.svg)](https://pypi.org/project/indexhr/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
