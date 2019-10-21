@@ -30,7 +30,7 @@ __all__ = [
     '__copyright__',
 ]
 
-__version__ = '0.7.2'
+__version__ = '0.7.3'
 __title__ = 'indexhr'
 __summary__ = 'index.hr basic news content in the terminal'
 __url__ = 'https://github.com/marinko-peso/index-hr/'
